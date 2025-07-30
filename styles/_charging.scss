@@ -1,0 +1,47 @@
+.charging {
+    background-color: $dark-bg;
+    padding: 100px 0;
+
+    .section-title {
+        color: #fff;
+    }
+
+    &__banner {
+        padding: 0;
+        height: auto;
+
+        background-image: url("/charging.jpg");
+        background-size: cover;
+        background-position: center;
+    }
+
+    &__details {
+        background-color: $color-dark;
+        padding: 25px !important;
+    }
+
+    &__detail {
+        display: flex;
+        align-items: center;
+        padding: 25px 0;
+
+        .icon {
+            margin-right: 20px;
+        }
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    .charging {
+        padding-bottom: 0;
+        &__banner {
+            height: 300px;
+        }
+        &__heading {
+            padding: 20px;
+            .p {
+                padding-bottom: 50px;
+            }
+        }
+    }
+}

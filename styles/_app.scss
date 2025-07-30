@@ -1,0 +1,60 @@
+.app {
+    background-color: $dark-bg;
+    padding: 100px 0;
+
+    .section-title {
+        color: #fff;
+    }
+
+    &__banner {
+        padding: 0;
+        height: 600px;
+
+        background-image: url("/con.jpeg");
+        background-size: cover;
+        background-position: center;
+    }
+
+    &__details {
+        padding: 25px !important;
+
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+    }
+
+    &__detail {
+        width: 22%;
+        display: flex;
+        align-items: center;
+        padding: 25px 0;
+
+        .icon {
+            margin-right: 20px;
+        }
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    .app {
+        padding-bottom: 0;
+
+        &__banner {
+            height: 300px;
+        }
+        &__heading {
+            padding: 20px;
+            .p {
+                padding-bottom: 50px;
+            }
+        }
+
+        &__details{
+            
+        }
+
+        &__detail{
+            width: 100%;
+        }
+    }
+}

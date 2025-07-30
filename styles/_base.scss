@@ -1,0 +1,169 @@
+// FONTS
+@font-face {
+    font-family: "Made Outer";
+    src: url("/fonts/Made-Outer.otf");
+    font-style: normal;
+    font-weight: 400;
+}
+
+@font-face {
+    font-family: "Joyride";
+    src: url("/fonts/Joyride-Regular.otf");
+    font-style: normal;
+    font-weight: 400;
+}
+
+// MIXINS
+@mixin center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+// VARIABLES
+$font-primary: "Made Outer";
+$font-secondary: "Joyride";
+
+$color-gray: #8d8d8c;
+$color-gray-dark: #505050;
+$color-dark: #1c1f23;
+$color-bg: #f3f4f4;
+$dark-bg: #000;
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: $font-primary;
+}
+
+// TYPOGRAPHY
+.h1 {
+    font-family: $font-secondary;
+    font-size: 65px !important;
+    color: #fff;
+    overflow: hidden;
+}
+.p {
+    color: #fff;
+    font-size: 15px;
+
+    &--dark{
+        color: $color-dark;
+    }
+}
+.h3 {
+    font-family: $font-secondary;
+    color: #fff;
+    font-size: 18px !important;
+}
+.section-title {
+    font-family: $font-secondary;
+    text-align: center;
+    padding-bottom: 80px;
+}
+.page-title {
+    width: 100%;
+    padding: 200px 50px 50px 50px;
+    
+    background-color: $dark-bg;
+    color: #fff;
+    text-align: center;
+
+    &__title {
+        font-family: $font-secondary;
+        padding-bottom: 30px;
+    }
+}
+.icon {
+    font-size: 30px;
+    color: #fff;
+    margin: 5px;
+}
+.dark-icon {
+    font-size: 40px;
+    color: $color-dark;
+}
+
+@media only screen and (max-width: 600px) {
+    .h1 {
+        font-size: 2em !important;
+    }
+    .p {
+        font-size: 12px;
+    }
+    .section-title {
+        padding-bottom: 30px;
+        text-align: left;
+    }
+}
+
+// BASE STYLE
+.cont {
+    width: 100%;
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+.btns {
+    width: auto;
+    padding: 10px 30px;
+    outline: none;
+    border: none;
+    overflow: hidden;
+    font-size: 15px;
+
+    &--border {
+        border: 1px solid $color-gray;
+    }
+
+    &--dark {
+        background-color: #000;
+        color: #fff;
+    }
+
+    transition: all 0.5s ease;
+
+    &:hover {
+        transform: translateY(-5px);
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    .hide-on-phone {
+        display: none !important;
+    }
+    .sm-mb-5 {
+        margin-bottom: 30px;
+    }
+}
+
+.hide-on-pc {
+    @media only screen and (min-width: 601px) {
+        display: none;
+    }
+}
+
+// OVERWRITE VALUE
+p {
+    margin-bottom: 0 !important;
+}
+
+::-webkit-scrollbar {
+    width: 5px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+    background: radial-gradient(18.02% 49.93% at 55.58% 50.07%, #b1d26f 0%, #b1d26f 0.01%, #60e7ce 100%);
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+    background: #fff;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+    background: transparent;
+}

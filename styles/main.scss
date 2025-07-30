@@ -1,0 +1,27 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+@import "./base";
+@import "./nav";
+@import "./header";
+@import "./why";
+@import "./services";
+@import "./charging";
+@import "./team";
+@import "./app";
+@import "./footer";
+
+@import "./privacy";
+
+.border-gradient {
+  border: 10px solid;
+  border-image-slice: 1;
+  border-width: 5px;
+}
+.border-gradient-purple {
+  border-image-source: linear-gradient(
+    51deg,
+    rgb(81, 145, 213) 0%,
+    rgb(19, 235, 145) 100%
+  );
+}

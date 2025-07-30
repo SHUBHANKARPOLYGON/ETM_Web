@@ -1,0 +1,211 @@
+.cursor-box {
+    width: 100%;
+    height: 100vh;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 10;
+    cursor: url("/play-cursor.svg"), auto;
+    cursor: url("/play-cursor.svg") 15 15, auto;
+}
+
+
+.scroll-text {
+    cursor: pointer;
+    -webkit-animation: blink 3s linear infinite;
+    animation: blink 3s linear infinite;
+    position: absolute;
+    bottom: 20px;
+    left: 0;
+    right: 0;
+    margin: auto;
+    color: #fff;
+    width: fit-content;
+    z-index: 1000;
+    display: block;
+    padding: 8px;
+}
+@keyframes blink {
+    0% {
+        opacity: 0.2;
+       }
+       50% {
+        opacity: 1;
+       }
+       100% {
+        opacity: 0.2;
+       }
+}
+
+.header {
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+    position: relative;
+    background-color: rgba(0, 0, 0, 0.6);
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    &__play-area {
+        width: 100%;
+        height: 100vh;
+        overflow: hidden;
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: 10;
+        cursor: none;
+    }
+
+    &__bg-video {
+        width: 100%;
+        min-height: 100vh;
+        max-height: 100vh;
+        overflow: hidden;
+        object-fit: cover;
+
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: -1;
+        &::after{
+            content:'';
+            position: absolute;
+            top:0;
+            left:0;
+            width: 100%;
+            height: 100%;
+        }
+    }
+
+    &__title{
+        text-align: center;
+        font-family: $font-secondary;
+        font-size: 50px;
+        color: #fff;
+
+        @media only screen and (max-width: 600px) {
+            font-size: 30px;   
+        }
+    }
+
+
+}
+
+.popup {
+    width: 100%;
+    height: 100vh;
+
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 100;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    &__close {
+        width: 100%;
+        height: 100vh;
+        background: rgba(255, 255, 255, 0.15);
+        backdrop-filter: blur(10px);
+        -webkit-backdrop-filter: blur(10px);
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: -1;
+        cursor: pointer;
+    }
+}
+.video-popup {
+    width: fit-content;
+    height: auto;
+    overflow: hidden;
+    object-fit: cover;
+    background-color: #000;
+    width: 90%;
+    margin: auto;
+}
+
+.nav-bar {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding: 20px 50px;
+    position: fixed;
+    top: 0;
+    z-index: 11;
+
+    .p {
+        cursor: pointer;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .nav-bar {
+        align-items: center;
+    }
+}
+
+// animations
+@keyframes blur {
+    0% {
+        text-shadow: 0 0 100px #fff;
+        opacity: 0;
+    }
+    5% {
+        text-shadow: 0 0 90px #fff;
+    }
+    15% {
+        opacity: 1;
+    }
+    20% {
+        text-shadow: 0 0 0px #fff;
+    }
+    80% {
+        text-shadow: 0 0 0px #fff;
+    }
+    85% {
+        opacity: 1;
+    }
+    95% {
+        text-shadow: 0 0 90px #fff;
+    }
+    100% {
+        text-shadow: 0 0 100px #fff;
+        opacity: 0;
+    }
+}
+
+@-webkit-keyframes blur {
+    0% {
+        text-shadow: 0 0 100px #fff;
+        opacity: 0;
+    }
+    5% {
+        text-shadow: 0 0 90px #fff;
+    }
+    15% {
+        opacity: 1;
+    }
+    20% {
+        text-shadow: 0 0 0px #fff;
+    }
+    80% {
+        text-shadow: 0 0 0px #fff;
+    }
+    85% {
+        opacity: 1;
+    }
+    95% {
+        text-shadow: 0 0 90px #fff;
+    }
+    100% {
+        text-shadow: 0 0 100px #fff;
+        opacity: 0;
+    }
+}
